@@ -19,6 +19,16 @@
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/about/">About</a></li>
+
+                        {% if user.is_authenticated %}
+                            <li><a href="{% url 'users:user-logout' %}">Log Out</a></li>
+                            <li><a href="{% url 'notes:note-lists' %}">Notes</a></li>
+                            
+                        {% else %}
+                            <li><a href="{% url 'users:user-register' %}">Create Account</a></li>
+                            <li><a href="{% url 'users:user-login' %}">Log In</a></li>
+                        
+                        {% endif %}
                     </ul>
                 </nav>
             </div>
