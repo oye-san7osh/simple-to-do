@@ -1,5 +1,5 @@
-# Django To-Do App 📝
-A simple to do web application built using Python Django Framework(PDF)
+# Django Note App 📝
+A simple Note web application built using Python Django Framework(PDF)
 
 ## 🚀Features
 - User Registration, Login & Logout
@@ -8,13 +8,13 @@ A simple to do web application built using Python Django Framework(PDF)
 ## 📂 Project Structure
     TO DO WEB APP/
     |--->.venv
-    |--->to_do_app
+    |--->Keep_Note
     |   |--->templates
-    |   |--->to_do_app
-    |   |--->todo_task
+    |   |--->Keep_Note
+    |   |--->Note
     |   |   |--->migrations
     |   |   |--->templates
-    |   |       |--->todo_task
+    |   |       |--->Note
     |   |--->users
     |   |   |--->migrations
     |   |   |--->templates
