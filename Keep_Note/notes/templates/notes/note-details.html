@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Note Details
+{% endblock %}
+
+{% block content %}
+    <h2>Details of Notes</h2>
+
+    <p>
+        Name of Note: 
+        <strong>{{ notedetail.note_name }}</strong>
+    </p>
+    <p>
+        Detail of Note: <strong>{{ notedetail.note_detail }}</strong>
+    </p>
+    <p>
+        Created by: <strong>{{ notedetail.created_by }}
+            at {{ notedetail.note_time}} on {{ notedetail.note_date }}
+        </strong>
+    </p>
+{% endblock %}
