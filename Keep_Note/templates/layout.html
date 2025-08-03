@@ -21,8 +21,9 @@
                         <li><a href="/about/">About</a></li>
 
                         {% if user.is_authenticated %}
-                            <li><a href="{% url 'users:user-logout' %}">Log Out</a></li>
                             <li><a href="{% url 'notes:note-lists' %}">Notes</a></li>
+                            <li><a href="{% url 'notes:note-create' %}">Create Note</a></li>
+                            <li><a href="{% url 'users:user-logout' %}">Log Out</a></li>
                             
                         {% else %}
                             <li><a href="{% url 'users:user-register' %}">Create Account</a></li>

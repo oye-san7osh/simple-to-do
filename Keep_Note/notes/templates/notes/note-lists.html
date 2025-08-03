@@ -8,12 +8,15 @@
     <h2>Lists of Notes</h2>
 
     {% for note in notelists %}
-        <ol>
+        <ul>
             <li>
-                <strong>Note Name:</strong> <a href="{% url 'note.note_name' note.slug_link %}">{{ note.note_name }}</a>
+                <strong>Note Name:</strong> 
+                    <a href="{% url 'notes:note-details' note.slug_link %}">{{ note.note_name }}</a>
+                    <a href="{% url 'notes:note-update' note.slug_link %}">Update</a> 
+                    <a href="{% url 'notes:note-delete' note.slug_link %}">Delete</a>
             </li>
             <p><strong>Created on:</strong> {{ note.note_date }}</p>
-        </ol>
+        </ul>
     {% empty %}
         <p><em>🚨</em> <strong>No Note Found.</strong></p>
     {% endfor %}

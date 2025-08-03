@@ -1,13 +1,13 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-    New Note
+    Update Note
 {% endblock %}
 
 {% block content %}
-    <h2>What's on your note?</h2>
+    <h2>What change do you want to make?</h2>
 
-    <form action="{% url 'notes:note-create' %}" method = "POST">
+    <form action="" method = "POST">
         {% csrf_token %}
 
             <p>
@@ -17,6 +17,6 @@
                 <strong>Detail of Note:</strong> {{ form.note_detail }}
             </p>
 
-            <button type = "submit">Create Note</button>
+            <button type = "submit">Update Note</button>
     </form>
 {% endblock %}
