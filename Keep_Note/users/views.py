@@ -14,7 +14,7 @@ def user_register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            # redirect page/link
+            return redirect('notes:note-lists')
     else:
         form = CustomUserRegisterForm()
     return render(request, 'users/user-register.html', {'form':form})
@@ -30,7 +30,7 @@ def user_login(request):
             user = authenticate(request, username = username, password = password)
             if user is not None:
                 login(request, user)
-                # redirect page/link
+                return redirect('notes:note-lists')
         else:
             messages.error(request, "Invalid username or password")
     else:
@@ -39,5 +39,9 @@ def user_login(request):
 
 @login_required
 def user_logout(request):
-    logout(request)
-    return redirect('users:user-login')
+   
+    if request.method == "POST":
+        logout(request)
+        return redirect('users:user-login')
+
+    return render(request, 'users/user-logout.html' )
