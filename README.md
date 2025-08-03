@@ -11,10 +11,10 @@ A simple Note web application built using Python Django Framework(PDF)
     |--->Keep_Note
     |   |--->templates
     |   |--->Keep_Note
-    |   |--->Note
+    |   |--->notes
     |   |   |--->migrations
     |   |   |--->templates
-    |   |       |--->Note
+    |   |       |--->notes
     |   |--->users
     |   |   |--->migrations
     |   |   |--->templates
