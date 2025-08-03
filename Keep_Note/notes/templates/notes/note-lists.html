@@ -5,8 +5,16 @@
 {% endblock %}
 
 {% block content %}
-
     <h2>Lists of Notes</h2>
-    
 
+    {% for note in notelists %}
+        <ol>
+            <li>
+                <strong>Note Name:</strong> <a href="{% url 'note.note_name' note.slug_link %}">{{ note.note_name }}</a>
+            </li>
+            <p><strong>Created on:</strong> {{ note.note_date }}</p>
+        </ol>
+    {% empty %}
+        <p><em>🚨</em> <strong>No Note Found.</strong></p>
+    {% endfor %}
 {% endblock %}
